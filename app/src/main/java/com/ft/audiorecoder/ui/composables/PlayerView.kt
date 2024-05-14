@@ -68,6 +68,8 @@ fun PlayerView(
                     R.drawable.ic_play
                 },
                 color = Color.Green,
+                buttonSize = 80.dp,
+                iconSize = 1.5f
             ) {
                 isPlaying = if (isPlaying) {
                     onPause()

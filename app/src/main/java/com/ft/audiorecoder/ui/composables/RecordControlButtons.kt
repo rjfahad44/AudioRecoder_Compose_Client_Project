@@ -41,8 +41,9 @@ fun RecordControlButtons(
         RoundButton(
             modifier = Modifier.weight(1f),
             iconId = R.drawable.ic_close,
-            iconSize = 55.dp,
-            color = Color.Gray
+            buttonSize = 55.dp,
+            iconSize = 1.5f,
+            color = Color.Gray.copy(alpha = 0.6f)
         ) {
             onStop()
             state = true
@@ -55,8 +56,9 @@ fun RecordControlButtons(
             } else {
                 R.drawable.ic_play
             },
-            iconSize = 65.dp,
-            color = Color.Green
+            buttonSize = 80.dp,
+            iconSize = 1.5f,
+            color = Color.Green.copy(alpha = 0.6f)
         ) {
             onRecord()
             isPressedTogglePause = !isPressedTogglePause
@@ -70,8 +72,9 @@ fun RecordControlButtons(
             } else {
                 R.drawable.ic_menu
             },
-            iconSize = 55.dp,
-            color = Color.Gray,
+            buttonSize = 55.dp,
+            iconSize = 1.5f,
+            color = Color.Gray.copy(alpha = 0.6f),
         ) {
             onToggleRecord()
             state = false

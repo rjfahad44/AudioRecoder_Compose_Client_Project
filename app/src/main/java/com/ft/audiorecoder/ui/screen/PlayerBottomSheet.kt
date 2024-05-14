@@ -138,10 +138,11 @@ fun PlayerBottomSheet(
                                 } else {
                                     mediaPlayer?.start()
                                 }
+                            },
+                            onPause = {
+                                mediaPlayer?.pause()
                             }
-                        ) {
-                            mediaPlayer?.pause()
-                        }
+                        )
                     }
                 }
             }

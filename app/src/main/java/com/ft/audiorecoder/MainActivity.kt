@@ -198,7 +198,7 @@ fun MainContent(
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun DefaultPreview() {
     AudioRecoderTheme {

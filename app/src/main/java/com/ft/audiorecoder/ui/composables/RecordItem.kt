@@ -35,7 +35,8 @@ fun RecordItem(audioRecord: AudioRecord, onClick: () -> Unit) {
     ) {
         RoundButton(
             iconId = R.drawable.ic_play,
-            iconSize = 30.dp,
+            buttonSize = 30.dp,
+            iconSize = 1.5f,
             color = Color.LightGray
         ) {
         }

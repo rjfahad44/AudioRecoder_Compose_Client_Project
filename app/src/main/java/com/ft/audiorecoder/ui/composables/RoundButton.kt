@@ -9,6 +9,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -21,8 +22,9 @@ import com.ft.audiorecoder.R
 fun RoundButton(
     modifier: Modifier = Modifier,
     @DrawableRes iconId: Int,
-    iconSize: Dp = 55.dp,
-    color: Color = Color.Gray,
+    buttonSize: Dp = 55.dp,
+    iconSize: Float = 1f,
+    color: Color = Color.Gray.copy(alpha = 0.6f),
     onClick: () -> Unit
 ) {
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
@@ -32,7 +34,8 @@ fun RoundButton(
             contentScale = ContentScale.Inside,
             modifier = Modifier
                 .background(color = color, shape = CircleShape)
-                .size(iconSize)
+                .size(buttonSize)
+                .scale(iconSize)
                 .clickable {
                     onClick()
                 },
@@ -45,8 +48,9 @@ fun RoundButton(
 fun PreviewOFButton() {
     RoundButton(
         iconId = R.drawable.ic_play,
-        iconSize = 60.dp,
-        color = Color.Gray,
+        buttonSize = 55.dp,
+        iconSize = 1f,
+        color = Color.Gray.copy(alpha = 0.6f),
     ) {
     }
 }
